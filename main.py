@@ -47,6 +47,14 @@ cv2.imwrite('new_img.jpg', fix_img)
 
 fig = plt.figure(figsize=(10, 8))
 ax = fig.add_subplot(111)
-ax.imshow(fix_img)
+# ax.imshow(fix_img)
+
+#############################################################################
+
+while True:
+    cv2.imshow('puppy', img)
+    if cv2.waitKey() & 0xff == ord('q'):
+        break
 
 
+cv2.destroyAllWindows()
